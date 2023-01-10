@@ -21,7 +21,7 @@ tags_metadata = [
 ]
 
 description = '''
-This is a simple API that allows to do the following:
+This is a Social Network App API that allows to do the following:
 * User signup and login/get tokens
 * Create/view/update/delete user posts
 * Like/dislike posts

@@ -13,3 +13,7 @@ In order to launch the app:
 Examples of HTTP requests are in `requests.http` file
 
 API documentation and test scenarios can be found at [http://localhost:8000/docs]()
+
+API database schema is provided below:
+
+![](db_schema.jpg)
