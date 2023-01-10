@@ -1,0 +1,53 @@
+### user signup
+POST http://127.0.0.1:8000/users
+Content-Type: application/json
+
+{
+  "username": "aaa",
+  "email": "aaa@gmail.com",
+  "password": "aaa"
+}
+
+### user login / get token
+POST http://127.0.0.1:8000/token
+Content-Type: multipart/form-data; boundary=FormBoundary
+Accept: application/json
+
+--FormBoundary
+Content-Disposition: form-data; name="username"
+
+aaa
+--FormBoundary
+Content-Disposition: form-data; name="password"
+
+aaa
+--FormBoundary--
+
+### create a post for a user
+POST http://127.0.0.1:8000/posts/
+Content-Type: application/json
+Authorization: Bearer // insert token here
+
+{
+"content": "new post"
+}
+
+### get all posts
+GET http://127.0.0.1:8000/posts/
+Accept: application/json
+Authorization: Bearer // insert token here
+
+### get my posts
+GET http://127.0.0.1:8000/posts/mine/
+Accept: application/json
+Authorization: Bearer // insert token here
+
+### add likes to a post
+PATCH http://127.0.0.1:8000/posts/1/like/
+Content-Type: application/json
+Authorization: Bearer // insert token here
+
+### add dislikes to a post
+PATCH http://127.0.0.1:8000/posts/1/dislike/
+Content-Type: application/json
+Authorization: Bearer // insert token here
