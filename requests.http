@@ -3,9 +3,9 @@ POST http://localhost:8000/users
 Content-Type: application/json
 
 {
-  "username": "aaa",
-  "email": "aaa@gmail.com",
-  "password": "aaa"
+  "username": "bbb",
+  "email": "bbb@gmail.com",
+  "password": "bbb"
 }
 
 ### user login / get token
@@ -16,11 +16,11 @@ Accept: application/json
 --FormBoundary
 Content-Disposition: form-data; name="username"
 
-aaa
+bbb
 --FormBoundary
 Content-Disposition: form-data; name="password"
 
-aaa
+bbb
 --FormBoundary--
 
 ### create a post for a user
@@ -29,7 +29,7 @@ Content-Type: application/json
 Authorization: Bearer // insert token here
 
 {
-"content": "new post"
+"content": "new post for user 2"
 }
 
 ### get all posts
@@ -43,11 +43,11 @@ Accept: application/json
 Authorization: Bearer // insert token here
 
 ### add likes to a post
-PATCH http://localhost:8000/posts/1/like/
+PATCH http://localhost:8000/posts/2/like/
 Content-Type: application/json
 Authorization: Bearer // insert token here
 
 ### add dislikes to a post
-PATCH http://localhost:8000/posts/1/dislike/
+PATCH http://localhost:8000/posts/2/dislike/
 Content-Type: application/json
 Authorization: Bearer // insert token here
